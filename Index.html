@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f1f1f1; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .login-box { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; }
+    .login-box h2 { text-align: center; color: orange; }
+    input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { width: 100%; padding: 10px; background: orange; color: white; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Orange Money (Test)</h2>
+    <input type="text" id="username" placeholder="Numéro de téléphone">
+    <input type="password" id="password" placeholder="Code PIN">
+    <button onclick="enregistrer()">Se connecter</button>
+  </div>
+
+  <script>
+    function enregistrer() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Enregistrer dans le stockage local du navigateur
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+
+      alert('Identifiants enregistrés localement (test uniquement) !');
+    }
+  </script>
+</body>
+</html>
